@@ -665,6 +665,11 @@ ul.list-category li {
   flex-basis: calc(33.33% - 20px);
   border: 1px solid #d5d4e4;
   border-radius: 20px;
+  overflow: hidden;
+}
+
+ul.list-category li:hover img {
+  transform: scale(1.1);
 }
 
 ul.list-category li.shadow-dark {
@@ -673,12 +678,18 @@ ul.list-category li.shadow-dark {
 
 ul.list-category li .blog-img {
   position: relative;
+  overflow: hidden;
+  margin-bottom: 32px;
 }
 
 ul.list-category li .blog-img img {
+  width: 100%;
+  height: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  margin-bottom: 32px;
+  transition: 0.3s ease;
+  overflow: hidden;
+  display: block;
 }
 
 ul.list-category li .blog-img .blog-date {
