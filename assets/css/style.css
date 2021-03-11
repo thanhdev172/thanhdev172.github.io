@@ -441,3 +441,212 @@ ul.list-services li:hover i {
   color: white;
   border: 1px solid;
 }
+
+/* Portfolio */
+.portfolio .container {
+  padding-bottom: 30px;
+}
+.portfolio .wp-btn {
+  text-align: center;
+}
+
+.portfolio .wp-btn button {
+  border: none;
+  background: transparent;
+  color: var(--text-color);
+  text-transform: capitalize;
+  margin-bottom: 40px;
+  padding: 0;
+  margin: 0px 11px 40px 11px;
+  font-weight: 600;
+  transition: 0.3s;
+  border-bottom: 2px solid transparent;
+}
+
+.portfolio .wp-btn button:focus {
+  outline: none;
+}
+
+.portfolio .wp-btn button.active {
+  border-bottom: 2px solid red;
+  color: red;
+}
+
+ul.list-pictures {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul.list-pictures li {
+  flex-basis: 30.33%;
+  border: 4px solid white;
+  margin-bottom: 30px;
+  position: relative;
+  margin: 0 auto 30px auto;
+}
+
+ul.list-pictures li.show {
+  display: block;
+  animation: lightBoxImage 0.4s ease;
+}
+
+ul.list-pictures li.hide {
+  display: none;
+}
+
+ul.list-pictures li img {
+  width: 100%;
+  display: block;
+}
+
+ul.list-pictures li .black-block {
+  width: 100%;
+  height: 100%;
+  background: #000000a1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+ul.list-pictures li h4.portfolio-title {
+  color: white;
+  text-transform: capitalize;
+  font-weight: 600;
+  position: absolute;
+  top: 35px;
+  left: 30px;
+  z-index: 2;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: 0.3s ease;
+}
+
+ul.list-pictures li:hover h4.portfolio-title,
+ul.list-pictures li:hover .portfolio-search,
+ul.list-pictures li:hover .black-block {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+ul.list-pictures li .portfolio-search {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  color: red;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+  transform: translateX(30px);
+  opacity: 0;
+}
+
+/* light-box */
+.light-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: red;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  /* display: none; */
+  transition: 0.3s;
+}
+
+.light-box.open {
+  display: flex;
+  animation: lightBoxImage 0.3s ease;
+}
+
+.light-box .light-box-content {
+  transition: 0.5s ease;
+}
+
+.light-box.open .light-box-content {
+  animation: lightBoxImage 0.5s ease;
+}
+
+.light-box .light-box-content img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 450px;
+}
+
+.light-box .light-box-content .wp-info {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 20px;
+}
+
+.light-box .light-box-content .box-title {
+  text-transform: capitalize;
+}
+
+.light-box .light-box-content .exit {
+  text-align: right;
+  font-size: 25px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.light-box .light-box-control {
+  background: white;
+  background: greenyellow;
+}
+
+.light-box .light-box-control .prev,
+.light-box .light-box-control .next {
+  cursor: pointer;
+  z-index: 100;
+  background: white;
+  color: red;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.light-box .light-box-control .prev {
+  position: absolute;
+  left: 30px;
+}
+
+.light-box .light-box-control .next {
+  position: absolute;
+  right: 30px;
+}
+
+.light-box .light-box-control .prev:hover,
+.light-box .light-box-control .next:hover {
+  transform: scale(1.1);
+}
+
+@keyframes lightBoxImage {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

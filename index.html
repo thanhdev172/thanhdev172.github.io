@@ -151,7 +151,7 @@
           </div>
         </div>
         <!-- End: about -->
-        <div class="services">
+        <div class="services hidden">
           <div class="container">
             <h2 class="title">Services</h2>
             <ul class="list-services">
@@ -189,9 +189,79 @@
           </div>
         </div>
         <!-- End: services -->
+        <div class="portfolio">
+          <div class="container">
+            <h2 class="title">Portfolio</h2>
+            <div class="wp-btn">
+              <button type="button" class="all active" data-filter="all">All</button>
+              <button type="button" class="all" data-filter="web-design">web design</button>
+              <button type="button" class="all" data-filter="photography">photography</button>
+              <button type="button" class="all" data-filter="wordpress">wordpress</button>
+            </div>
+            <ul class="list-pictures">
+              <li class="picture-item" data-category="web-design">
+                <img src="assets/images/portfolio/1.jpg" alt="">
+                <div class="black-block"></div>
+                <h4 class="portfolio-title">web design</h4>
+                <div class="portfolio-search"><i class="fas fa-search"></i></div>
+              </li>
+              <li class="picture-item" data-category="wordpress">
+                <img src="assets/images/portfolio/2.jpg" alt="">
+                <div class="black-block"></div>
+                <h4 class="portfolio-title">Wordpress</h4>
+                <div class="portfolio-search"><i class="fas fa-search"></i></div>
+              </li>
+              <li class="picture-item" data-category="web-design">
+                <img src="assets/images/portfolio/3.jpg" alt="">
+                <div class="black-block"></div>
+                <h4 class="portfolio-title">web design</h4>
+                <div class="portfolio-search"><i class="fas fa-search"></i></div>
+              </li>
+              <li class="picture-item" data-category="photography">
+                <img src="assets/images/portfolio/4.jpg" alt="">
+                <div class="black-block"></div>
+                <h4 class="portfolio-title">Photography</h4>
+                <div class="portfolio-search"><i class="fas fa-search"></i></div>
+              </li>
+              <li class="picture-item" data-category="wordpress">
+                <img src="assets/images/portfolio/5.jpg" alt="">
+                <div class="black-block"></div>
+                <h4 class="portfolio-title">Wordpress</h4>
+                <div class="portfolio-search"><i class="fas fa-search"></i></div>
+              </li>
+              <li class="picture-item" data-category="web-design">
+                <img src="assets/images/portfolio/6.jpg" alt="">
+                <div class="black-block"></div>
+                <h4 class="portfolio-title">web design</h4>
+                <div class="portfolio-search"><i class="fas fa-search"></i></div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
       <!-- End: content -->
     </div>
     <!-- End: wrapper -->
+
+    <div class="light-box">
+        <div class="light-box-content">
+          <div class="exit">x</div>
+          <img src="assets/images/portfolio/2.jpg" alt="">
+          <div class="wp-info">
+            <div class="box-title">web design</div>
+            <div class="order">1 of 6</div>
+          </div>
+          
+        </div>
+        <div class="light-box-control">
+          <div class="prev" onclick="prev()"><i class="fas fa-chevron-left"></i></div>
+          <div class="next" onclick="next()"><i class="fas fa-chevron-right"></i></div>
+          
+        </div>
+    </div>
+    <!-- End: lightbox -->
+
+    <!-- js -->
+    <script src="assets/js/app.js"></script>
   </body>
 </html>
