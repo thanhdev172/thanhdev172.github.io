@@ -47,7 +47,7 @@
       </div>
       <!-- End: aside -->
       <div class="content">
-        <div class='home hidden'>
+        <div class='home'>
           <img src="assets/images/avatar.jpg" alt="" class="avatar" />
           <div class="name">nguyen cong thanh</div>
           <div class="title">I'm a Web Developer</div>
@@ -67,7 +67,7 @@
           </ul>
         </div>
         <!-- End: home -->
-        <div class="about hidden">
+        <div class="about">
           <div class="container">
             <h2 class="title">about me</h2>
             <h3 class="intro">I'm Thanh and <span>Web Developer</span></h3>
@@ -189,7 +189,7 @@
           </div>
         </div>
         <!-- End: services -->
-        <div class="portfolio hidden">
+        <div class="portfolio">
           <div class="container">
             <h2 class="title">Portfolio</h2>
             <div class="wp-btn">
@@ -239,7 +239,7 @@
           </div>
         </div>
         <!-- End: portfolio -->
-        <div class="blog hidden">
+        <div class="blog">
           <div class="container">
               <h2 class="title">lastest blog</h2>
               <ul class="list-category">
@@ -301,8 +301,11 @@
                 </div>
               </div>
               <form class="contact-form" autocomplete="off">
-                <input type="text" name="name" placeholder="Name*">
-                <input type="email" name="email" placeholder="Email*">
+                <div class="row">
+                  <input type="text" name="name" placeholder="Name*">
+                  <input type="email" name="email" placeholder="Email*">
+                </div>
+               
                 <input type="text" name="subject" placeholder="Subject*">
                 <textarea name="content" id="" cols="30" rows="10" placeholder="Your Message..."></textarea>
                 <button class="">send message</button>
