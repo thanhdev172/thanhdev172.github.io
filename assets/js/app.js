@@ -1,3 +1,15 @@
+//loader
+window.addEventListener("load", function () {
+  document
+    .querySelector("ul.list-items li:first-child")
+    .classList.add("active");
+  document.querySelector(".loader").classList.add("opacity-0");
+
+  setTimeout(function () {
+    document.querySelector(".loader").style.display = "none";
+  }, 1000);
+});
+
 const wpBtnElement = document.querySelector(".wp-btn");
 const allBtnsElement = document.querySelectorAll(".wp-btn button");
 
@@ -85,4 +97,48 @@ for (let i = 0; i < totalPicturesElement; i++) {
 
 exitElement.addEventListener("click", function () {
   toggleLightBox();
+});
+
+//active nav item
+const navElement = document.querySelector("nav ul.list-items"),
+  navItemElement = navElement.querySelectorAll("li"),
+  totalNavItems = navItemElement.length;
+
+for (let i = 0; i < totalNavItems; i++) {
+  navItemElement[i].addEventListener("click", function (e) {
+    for (let j = 0; j < totalNavItems; j++) {
+      navItemElement[j].classList.remove("active");
+    }
+    this.classList.add("active");
+  });
+}
+
+//chuyen slide
+for (let i = 0; i < totalNavItems; i++) {
+  const aElement = navItemElement[i].querySelector("a");
+  aElement.addEventListener("click", function () {
+    let sectionName = this.getAttribute("href").split("#")[1];
+    // document.querySelector("#" + sectionName).classList.add("active");
+  });
+}
+
+//xu li click vao nav-toggler
+const navToggleElement = document.querySelector(".nav-toggler");
+navToggleElement.addEventListener("click", function () {
+  const asideElement = document.querySelector(".aside"),
+    contentElement = document.querySelector(".content");
+
+  navToggleElement.classList.toggle("open");
+  asideElement.classList.toggle("open");
+  contentElement.classList.toggle("open");
+});
+
+//scroll
+window.addEventListener("scroll", function () {
+  let postion = pageYOffset;
+  switch (postion) {
+    case 589:
+      console.log(1);
+      break;
+  }
 });
