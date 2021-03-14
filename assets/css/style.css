@@ -209,7 +209,7 @@ p.copyright {
 
 #wrapper .content .home img.avatar {
   width: 200px;
-  border-radius: 100px;
+  border-radius: 50%;
   box-shadow: 0px 3px 8px 0px #e5e5ef;
   padding: 8px;
   background: white;
@@ -907,6 +907,10 @@ form.contact-form textarea:focus {
   }
 }
 @media screen and (max-width: 767px) {
+ 
+  #wrapper .aside .nav-toggler{
+    display: none;
+  }
   ul.list-services li {
     width: calc(50% - 30px);
   }
